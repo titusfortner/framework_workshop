@@ -29,6 +29,7 @@ and download the tutorial zip file that corresponds with your workshop.
 4. [Set up Project](https://github.com/saucelabs-training/saucecon19-advanced-selenium-workshop#set-up-this-project-in-intellij)
     * [Mac](https://github.com/saucelabs-training/saucecon19-advanced-selenium-workshop#macosx)
     * [Windows](https://github.com/saucelabs-training/saucecon19-advanced-selenium-workshop#windows)
+5. Chrome v86
 
 ### Install Git
 

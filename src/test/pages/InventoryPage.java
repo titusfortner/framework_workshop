@@ -39,4 +39,8 @@ public class InventoryPage {
         getInventoryItem(product.getName()).click();
         return new ProductPage(driver);
     }
+
+    public void selectFirstProduct() {
+        driver.findElement(By.className("inventory_item_label")).click();
+    }
 }

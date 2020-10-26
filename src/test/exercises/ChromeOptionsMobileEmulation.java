@@ -7,6 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.Assert.assertTrue;
 
 //
@@ -33,6 +36,11 @@ public class ChromeOptionsMobileEmulation {
         }
 
         ChromeOptions chromeOptions = new ChromeOptions();
+
+        Map<String, String> mobileEmulation = new HashMap<>();
+        mobileEmulation.put("deviceName", "Nexus 5");
+
+        chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
 
         driver = new ChromeDriver(chromeOptions);
 

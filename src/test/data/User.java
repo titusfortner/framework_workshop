@@ -19,11 +19,9 @@ public class User {
         username = name;
     }
 
-    public User random() {
-        User user = new User();
-        user.username = faker.name().username();
-        user.password = faker.internet().password();
-        return user;
+    public User() {
+        username = faker.name().username();
+        password = faker.internet().password();
     }
 
     public String getUsername() {

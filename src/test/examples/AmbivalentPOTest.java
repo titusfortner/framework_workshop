@@ -19,4 +19,14 @@ public class AmbivalentPOTest extends BaseTest {
         inventoryPage.selectFirstProduct();
     }
 
+    @Test
+    public void opinionatedMethod() throws Exception {
+        HomePage homePage = HomePage.visit(driver);
+        User user = new User();
+
+        homePage.signInSuccessfully(user);
+
+        InventoryPage inventoryPage = new InventoryPage(driver);
+        inventoryPage.selectFirstProduct();
+    }
 }

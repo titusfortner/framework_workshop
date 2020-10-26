@@ -15,6 +15,12 @@ public class User {
         return user;
     }
 
+    public User blankPassword() {
+        User user = new User();
+        user.setPassword("");
+        return user;
+    }
+
     public  void setUsername(String name) {
         username = name;
     }

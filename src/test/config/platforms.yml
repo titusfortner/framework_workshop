@@ -1,0 +1,12 @@
+windows_10_ie:
+  browser_name: internet explorer
+  platform_name: Windows 10
+  browser_version: '11.0'
+mac_mojave_safari:
+  browser_name: safari
+  platform_name: macOS 10.14
+  browser_version: '12.0'
+windows_7_firefox:
+  browser_name: firefox
+  platform_name: Windows 7
+  browser_version: '60.0'

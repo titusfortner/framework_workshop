@@ -1,6 +1,10 @@
 package test.data;
 
+import com.github.javafaker.Faker;
+
 public class User {
+    private static Faker faker = new Faker();
+
     private String username;
     private String password;
 
@@ -13,6 +17,13 @@ public class User {
 
     public  void setUsername(String name) {
         username = name;
+    }
+
+    public User random() {
+        User user = new User();
+        user.username = faker.name().username();
+        user.password = faker.internet().password();
+        return user;
     }
 
     public String getUsername() {

@@ -11,6 +11,7 @@ import test.pages.InventoryPage;
 import test.pages.ProductPage;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 //
 // Exercise:
@@ -58,6 +59,15 @@ public class ImperativeDeclarative {
     public void declarative() {
         Product product = Product.valid();
 
+        InventoryPage inventoryPage = InventoryPage.visit(driver);
+        inventoryPage.selectProduct(product);
+
+        ProductPage productPage = new ProductPage(driver);
+        productPage.addToCart();
+        productPage.checkout();
+
+        CartPage cartPage = new CartPage(driver);
+        assertTrue(cartPage.hasProduct(product));
     }
 }
 

@@ -35,7 +35,8 @@ public class InventoryPage {
         return null;
     }
 
-    public void selectProduct(Product product) {
+    public ProductPage selectProduct(Product product) {
         getInventoryItem(product.getName()).click();
+        return new ProductPage(driver);
     }
 }

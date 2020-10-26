@@ -20,11 +20,13 @@ public class ProductPage {
         return driver.findElement(By.className("shopping_cart_link"));
     }
 
-    public void addToCart() {
+    public ProductPage addToCart() {
         getAddToCartButton().click();
+        return this;
     }
 
-    public void checkout() {
+    public CartPage checkout() {
         getCartButton().click();
+        return new CartPage(driver);
     }
 }
